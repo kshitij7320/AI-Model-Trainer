@@ -1,0 +1,25 @@
+@use "../abstracts/variables" as *;
+
+.footer {
+  padding: 2rem 0;
+  border-top: 1px solid $color-border;
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.8rem;
+    align-items: center;
+
+    p {
+      font-size: 0.95rem;
+    }
+  }
+
+  &__links {
+    display: inline-flex;
+    gap: 1rem;
+    font-weight: 700;
+    color: $color-text;
+  }
+}

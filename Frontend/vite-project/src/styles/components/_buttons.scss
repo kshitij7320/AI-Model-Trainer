@@ -1,0 +1,25 @@
+@use "../abstracts/variables" as *;
+
+.button {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.65rem 1.05rem;
+  font-weight: 700;
+  background-color: $color-primary;
+  color: #f6fffb;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 20px rgba(15, 118, 110, 0.22);
+  }
+
+  &--ghost {
+    background-color: transparent;
+    border: 1px solid $color-border;
+    color: $color-text;
+  }
+}

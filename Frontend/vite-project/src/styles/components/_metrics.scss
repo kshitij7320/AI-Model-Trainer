@@ -1,0 +1,23 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.metrics__grid {
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+}
+
+.metric-card {
+  @include card;
+  padding: 1rem;
+
+  h3 {
+    color: $color-primary;
+    margin-bottom: 0.2rem;
+  }
+
+  p {
+    color: $color-text;
+    font-weight: 700;
+  }
+}

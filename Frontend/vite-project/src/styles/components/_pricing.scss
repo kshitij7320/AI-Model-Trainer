@@ -1,0 +1,58 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.pricing__grid {
+  display: grid;
+  gap: 1rem;
+
+  @media (min-width: 45rem) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.pricing-card {
+  @include card;
+  padding: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+
+  &__price {
+    color: $color-text;
+    font-weight: 700;
+
+    span {
+      font-family: $font-heading;
+      font-size: 1.7rem;
+      margin-right: 0.3rem;
+    }
+  }
+
+  ul {
+    display: grid;
+    gap: 0.45rem;
+    margin: 0.3rem 0 0.5rem;
+  }
+
+  li {
+    position: relative;
+    padding-left: 1rem;
+    color: $color-muted;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.5rem;
+      width: 0.4rem;
+      height: 0.4rem;
+      border-radius: 50%;
+      background: $color-primary;
+    }
+  }
+
+  &--featured {
+    border-color: rgba(15, 118, 110, 0.6);
+    transform: translateY(-3px);
+  }
+}
