@@ -1,0 +1,92 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.studio {
+  &__header {
+    max-width: 60ch;
+    margin-bottom: 1.4rem;
+  }
+
+  &__grid {
+    display: grid;
+    gap: 1rem;
+
+    @include respond(lg) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+}
+
+.studio-card {
+  @include card;
+  padding: 1rem;
+  background: linear-gradient(
+    160deg,
+    rgba(255, 253, 247, 0.96),
+    rgba(240, 247, 243, 0.92)
+  );
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+  }
+}
+
+.studio-form {
+  display: grid;
+  gap: 0.55rem;
+
+  label {
+    font-size: 0.9rem;
+    color: $color-text;
+    font-weight: 700;
+  }
+
+  input {
+    border: 1px solid $color-border;
+    border-radius: 0.8rem;
+    padding: 0.55rem 0.7rem;
+    background: rgba(255, 255, 255, 0.72);
+    color: $color-text;
+  }
+
+  button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+    transform: none;
+    box-shadow: none;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 0.55rem;
+    flex-wrap: wrap;
+    margin-top: 0.35rem;
+  }
+}
+
+.studio-message {
+  margin-top: 0.2rem;
+  font-weight: 700;
+  color: $color-primary;
+}
+
+.studio-user,
+.studio-plan {
+  margin-top: 1rem;
+  border-top: 1px solid $color-border;
+  padding-top: 0.8rem;
+
+  h4 {
+    margin: 0 0 0.5rem;
+  }
+
+  p {
+    margin: 0.25rem 0;
+  }
+
+  ul {
+    margin: 0.45rem 0 0.2rem;
+    padding-left: 1.1rem;
+  }
+}

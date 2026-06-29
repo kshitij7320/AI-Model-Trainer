@@ -1,5 +1,6 @@
 import Header from "../components/Header";
 import HeroSection from "../components/HeroSection";
+import TrainerStudio from "../components/TrainerStudio";
 import FeaturesSection from "../components/FeaturesSection";
 import WorkflowSection from "../components/WorkflowSection";
 import MetricsSection from "../components/MetricsSection";
@@ -12,6 +13,7 @@ const HomePage = () => {
       <Header />
       <main>
         <HeroSection />
+        <TrainerStudio />
         <FeaturesSection />
         <WorkflowSection />
         <MetricsSection />
